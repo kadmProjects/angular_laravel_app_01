@@ -1,0 +1,39 @@
+<div class="login-card">
+    <div class="login-content">
+        <div class="login-logo-section">
+            <h1>LOGIN</h1>
+        </div>
+        <div class="login-form-section">
+            <form [formGroup]="loginForm" class="login-form" (ngSubmit)="onSubmit()">
+                <p>
+                    <mat-form-field appearance="legacy">
+                        <mat-label>EMAIL</mat-label>
+                        <input matInput placeholder="EMAIL" type="email" formControlName="email" id="email" required>
+                        <mat-icon matSuffix>email</mat-icon>
+                        <mat-error *ngIf="loginForm.controls['email']?.errors?.required">Email field cannot be empty</mat-error>
+                        <mat-error *ngIf="loginForm.controls['email']?.errors?.email">Given input should be a valid email address</mat-error>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="legacy">
+                        <mat-label>PASSWORD</mat-label>
+                        <input matInput placeholder="PASSWORD" type="password" formControlName="password" id="password" required>
+                        <mat-icon matSuffix>lock</mat-icon>
+                        <mat-error *ngIf="loginForm.controls['password']?.errors?.required">Password field cannot be empty</mat-error>
+                        <mat-error *ngIf="loginForm.controls['password']?.errors?.minlength">Password must have atleast 8 characters</mat-error>
+                    </mat-form-field>
+                </p>
+                <div class="login-btn-section">
+                    <button mat-raised-button color="primary" type="submit" class="login-btn" [disabled]="!loginForm.valid">LOGIN</button>
+                </div>
+            </form>
+            <div>
+                <!-- <a href="#">Fogot your password?</a> -->
+            </div>
+        </div>
+    </div>
+    <div class="vertical-devider"></div>
+    <div class="login-description">
+
+    </div>
+</div>

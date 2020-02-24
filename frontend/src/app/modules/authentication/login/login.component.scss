@@ -1,0 +1,64 @@
+.login-card {
+    width: 100%;
+    height: 100%;
+    //background-image: url('/assets/images/login-bg.jpg');
+    background-color: darken($color: #4b4a4a, $amount: 0);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.login-content {
+    width: 30%;
+    height: 60%;
+    //border: solid 1px white;
+    background-color: transparent;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+.vertical-devider {
+    position: absolute;
+    height: 80%;
+    top: 10%;
+    width: 1px;
+    background-color: white;
+    right: 50%;
+}
+
+.login-description {
+    width: 30%;
+    height: 60%;
+    background-color: transparent;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+}
+
+.login-logo-section {
+    color: white;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 4%;
+}
+
+.login-form-section {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.login-btn {
+    width: 100%;
+}
+
+mat-form-field {
+    width: 100%;
+    color: white;
+}
+
+mat-label {
+    color: white;
+}
