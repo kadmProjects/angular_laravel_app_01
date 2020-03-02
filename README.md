@@ -4,7 +4,7 @@ Angular Laravel REST api with Passport using **http only cookie** based Authenti
 # To setup the project
 1. Clone the repository.
 2. Create a new directory(**myApi**) and inside that create a new directory called **api**.
-3. Move all the contents within backend directory.
+3. Move all the contents within backend directory to **api** directory.
 4. Run production build for frontend.
 5. Move all the contents within dist/angular_laravel_app_01 into **myApi** directory along with the **.htaccess** file.
 6. Create a virtualHost using apache (Root directory should be **myApi**) and run the application.
