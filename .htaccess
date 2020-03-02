@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+# Rewrites all URLS without blog in them
+
+    RewriteCond %{REQUEST_URI} !^api
+    RewriteRule ^api(.*)$ api/public/$1 [L]
+
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
+ 
+ </IfModule>

@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    API_URL: 'http://backend.laravel.bit.local.com/api/'
+    API_URL: 'http://angular-laravel-app-01.com/api/'
 };

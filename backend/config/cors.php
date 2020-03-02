@@ -7,8 +7,7 @@ return [
     'allowed_methods' => ['*'],
 
     'allowed_origins' => [
-        //'http://localhost:4200',
-        'http://frontend.angular.bit.local.com'
+        'http://localhost:4200'
     ],
 
     'allowed_origins_patterns' => [],

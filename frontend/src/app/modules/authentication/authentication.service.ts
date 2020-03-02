@@ -69,21 +69,24 @@ export class AuthenticationService {
     }
 
     public logout(): Observable<any> {
-        let targetUrl = this._url + 'logout';
+        // Inorder to cookies beaing sent over http header, url should be relative 
+        let targetUrl = '/api/logout';
+        let data = null;
         let httpOptions = {
             headers: new HttpHeaders({
                 'Content-Type':  'application/json'
-            })
+            }),
+            withCredentials: true
         };
 
-        return this.http.post<any>(targetUrl, {withCredentials: true}, httpOptions)
+        return this.http.post<any>(targetUrl, data, httpOptions)
             .pipe(
                 catchError(this.httpErrorMsg.handleError)
             )
     }
 
     public getLoggedInStatus(url): Observable<any> {
-        let targetUrl = this._url + 'loginStatus';
+        let targetUrl = '/api/loginStatus';
         let data = { currentUrl: url };
         let httpOptions = {
             headers: new HttpHeaders({
