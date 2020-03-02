@@ -1,4 +1,4 @@
-# angular_laravel_app_01
+# Angular and Laravel RESTfull api
 Angular Laravel REST api with Passport using **http only cookie** based Authentication.
 
 # To setup the project
